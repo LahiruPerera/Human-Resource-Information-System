@@ -1,0 +1,111 @@
+
+//<datatype>_<section1>_<section2>__<section3>..
+
+Credential{
+	id_member
+	username
+	password / SHA1
+	lastlogin
+	forcepasswordreset
+	isSuspended
+}
+
+Group{
+	id_group
+	name
+	description
+	category
+	icon_id
+	        members --> meka enne na..
+	        roles
+	creation_date
+	creator
+	        twitter_id
+}
+
+Member{
+	Basic{
+		id_member -k
+		category -k
+		academicyear -k
+		first_name -k
+		middle_name -k
+		last_name -k
+		course -k
+		Gender -k
+		emailAddress -k
+		DateofBirth -k
+		joined_date -k
+		handler -k
+		availability -k
+		last_seen -k
+		current_city -k
+		home_town -k
+		ReligousView -k
+		About -k
+
+		Office_Location
+		phoneNumber
+		batch_number
+		Languages
+		skills
+		college
+		instagram
+		twitter
+		YouTube
+		Pinchester
+		Tumbler
+		Soundcloud
+		LinkedIn
+		Skype
+	}
+
+	Member_Permissions{
+		System{
+			b_system_adminpanel_access -k
+			b_system_member_add_power -k
+
+			i_system_member_suspend_power -k
+			i_system_member_suspend_power_needed -k
+
+			i_system_member_forcepasswordchange_power
+			i_system_member_forcepasswordchange_power_needed
+
+			1_system_member_delete_power -k
+			i_system_member_delete_power_needed -k
+
+
+			i_system_meeting_request_power
+			i_system_meeting_request_power_needed
+
+			b_system_group_create_power
+
+			i_system_member_message_power
+			i_system_member_message_power_needed
+
+			i_system_member_complain_power
+			i_system_member_complain_power_needed
+			b_system_member_complain_access
+		}
+
+		Group{
+			b_group_adminpanel_access
+
+			b_group_member_add_power
+			b_group_member_remove_power
+			b_group_member_upgrade_power
+
+			b_group_modify_power
+			b_group_delete_power
+
+			b_group_notice_post_power
+			b_group_notice_delete_power
+			b_group_notice_pin_power
+			b_group_notice_unpin_power
+			b_group_email_power
+			b_group_tweet_power
+		}
+
+	}
+}
+
